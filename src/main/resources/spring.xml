@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/beans ">
+
+    <bean name="classroom" class="com.orangegreen.ioc.test.Classroom">
+        <property name="roomCode" value="1001"></property>
+    </bean>
+
+    <bean name="student" class="com.orangegreen.ioc.test.Student">
+        <property name="name" value="学生张三"></property>
+        <property name="classroom" ref="classroom"></property>
+    </bean>
+
+    <bean name="teacher" class="com.orangegreen.ioc.test.Teacher">
+        <property name="name" value="老师李四"></property>
+        <property name="classroom" ref="classroom"></property>
+    </bean>
+
+</beans>
